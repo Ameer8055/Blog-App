@@ -25,7 +25,7 @@ const Signup = () => {
 
     
     axios
-      .post('http://localhost:3000/user/signup', { email, password, phone, address })
+      .post('/api/user/signup', { email, password, phone, address })
       .then((res) => {
         alert(res.data.message);
       })
