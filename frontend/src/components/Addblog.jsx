@@ -24,7 +24,7 @@ const Addblog = () => {
   const handleSubmit = () => {
     if (location.state != null) {
       axiosInstance
-        .put('/api/blog/update/'+location.state.val._id, form)
+        .put('/blog/update/'+location.state.val._id, form)
         .then((res) => {
           alert(res.data.message);
           navigate('/blogs');
@@ -34,7 +34,7 @@ const Addblog = () => {
         });
     } else {
       axiosInstance
-        .post('/api/blog/add', form)
+        .post('/blog/add', form)
         .then((res) => {
           alert(res.data.message);
           navigate('/blogs');
